@@ -2,6 +2,8 @@ npm init -y // Inicializa o node e cria package.json
 
 npm i -D typescript // Instala o typescript
 npm i -D @types/node
+npm i -D tsx // Instala o tsx, que possibilita rodar o arquivo sem converter para .js com "npx tsx 'nome_do_arquivo.ts'"
+npm i eslint @rocketseat/eslint-config -D // instala eslint (dps configurar arquivo .eslintrc.json e ativar onSave fix in settings)
 
 npx tsc --init // Cria o arquivo tsconfig.json, onde é necessário alterar o ano do es module
 
