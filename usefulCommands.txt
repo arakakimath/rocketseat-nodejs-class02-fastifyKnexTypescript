@@ -1,0 +1,8 @@
+npm init -y // Inicializa o node e cria package.json
+
+npm i -D typescript // Instala o typescript
+npm i -D @types/node
+
+npx tsc --init // Cria o arquivo tsconfig.json, onde é necessário alterar o ano do es module
+
+npx tsc "nome_do_arquivo.ts" // Converte o arquivo .ts -> .js
