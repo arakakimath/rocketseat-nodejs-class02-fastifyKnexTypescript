@@ -1,9 +1,21 @@
-import { expect, test } from 'vitest'
+import { expect, test, beforeAll, afterAll } from 'vitest'
+import request from 'supertest' // needs to install @types/supertest
+import { app } from '../src/app'
 
-test('o usuário consegue criar uma nova transação', () => {
-  // fazer a chamada HTTP p/ criar uma nova transação
+beforeAll(async () => {
+  await app.ready()
+})
 
-  const responseStatusCode = 201
+afterAll(async () => {
+  await app.close()
+})
 
-  expect(responseStatusCode).toEqual(201)
+test('o usuário consegue criar uma nova transação', async () => {
+  await request(app.server)
+    .post('/transactions').send({
+      title: 'New transaction',
+      amount: 5000,
+      type: 'credit',
+    })
+    .expect(201)
 })
