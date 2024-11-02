@@ -6,7 +6,7 @@
     "node": ">= 18"
   }
   "scripts": {
-    "start": "tsx watch build/server.ts",
+    "start": "tsx watch build/server.js",
     "dev": "tsx watch src/server.ts",
     "knex": "node --loader tsx ./node_modules/.bin/knex",
     "lint": "eslint src --ext .ts --fix",
