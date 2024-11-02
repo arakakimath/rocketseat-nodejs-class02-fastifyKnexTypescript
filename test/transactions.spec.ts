@@ -26,7 +26,7 @@ describe('Transactions routes', () => {
   })
 
   // it('should be able to create a new transaction', async () => { ... }
-  test.skip('o usuário consegue criar uma nova transação', async () => {
+  test('o usuário consegue criar uma nova transação', async () => {
     await request(app.server)
       .post('/transactions')
       .send({
@@ -37,7 +37,7 @@ describe('Transactions routes', () => {
       .expect(201)
   })
 
-  it.skip('should be able to list all transactions', async () => {
+  it('should be able to list all transactions', async () => {
     const createTransactionResponse = await request(app.server)
       .post('/transactions')
       .send({
@@ -61,7 +61,7 @@ describe('Transactions routes', () => {
     ])
   })
 
-  it.skip('should be able to get a specific transaction', async () => {
+  it('should be able to get a specific transaction', async () => {
     const createTransactionResponse = await request(app.server)
       .post('/transactions')
       .send({
