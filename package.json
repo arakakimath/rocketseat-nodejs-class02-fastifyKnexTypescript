@@ -2,6 +2,9 @@
   "name": "rocketseat-nodejs-class02-fastifyknextypescript",
   "version": "1.0.0",
   "main": "src/server.ts",
+  "engines": {
+    "node": ">= 18"
+  }
   "scripts": {
     "start": "tsx watch src/server.ts",
     "dev": "tsx watch src/server.ts",
@@ -19,6 +22,7 @@
     "@types/node": "^22.8.4",
     "@types/supertest": "^6.0.2",
     "eslint": "^8.57.1",
+    "sqlite3": "^5.1.7",
     "supertest": "^7.0.0",
     "ts-node": "^10.9.2",
     "tsup": "^8.3.5",
@@ -31,7 +35,7 @@
     "dotenv": "^16.4.5",
     "fastify": "^5.0.0",
     "knex": "^3.1.0",
-    "sqlite3": "^5.1.7",
+    "pg": "^8.13.1",
     "zod": "^3.23.8"
   }
 }
